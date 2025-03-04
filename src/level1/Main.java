@@ -39,8 +39,16 @@ public class Main {
                 result = a * b;
                 break;
             case '/':
-                result = a / b;
+                while (b == 0) {
+                    System.out.println("분모에 0이 올 수 없습니다. ");
+                    System.out.print("0을 제외한 양의 정수를 입력하세요 : ");
+                    b = scanner.nextInt();
+                    result = a / b;
+                }
                 break;
         }
+
+        System.out.println("값은 = " + result);
+
     }
 }
