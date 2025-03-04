@@ -9,14 +9,18 @@ public class Main {
 
         System.out.print("첫번째 숫자를 입력하세요 : ");
         int a = scanner.nextInt();
-         if (a < 0) {
-             System.out.println("0을 포함한 양의 정수로 입력하십시오.");
-         }
+        while (a < 0) {
+            System.out.println("0을 포함한 양의 정수로 입력하십시오.");
+            System.out.print("첫번째 숫자를 입력하세요 : ");
+            a = scanner.nextInt();
+        }
 
         System.out.print("두번째 숫자를 입력하세요 : ");
         int b = scanner.nextInt();
-        if (b < 0) {
+        while (b < 0) {
             System.out.println("0을 포함한 양의 정수로 입력하십시오.");
+            System.out.print("두번째 숫자를 입력하세요 : ");
+            b = scanner.nextInt();
         }
 
         System.out.print("사칙연산 기호를 입력하세요(+, -, *, /) : ");
@@ -37,11 +41,6 @@ public class Main {
             case '/':
                 result = a / b;
                 break;
-
-            default:
-                System.out.println("값이 일치하지 않습니다.");
         }
-
-
     }
 }
