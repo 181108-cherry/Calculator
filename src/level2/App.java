@@ -46,6 +46,7 @@ public class App {
             int result = calculator.calc(a, b, operation);
             System.out.println("값은 : " + result);
 
+            System.out.println("저장된 연산기록 :" + calculator.getList());
 
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
             str = scanner.next();
