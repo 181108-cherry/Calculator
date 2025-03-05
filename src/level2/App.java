@@ -30,9 +30,19 @@ public class App {
             System.out.print("사칙연산 기호를 입력하세요(+, -, *, /) : ");
             char operation = scanner.next().charAt(0);
 
-            if (b == 0 && operation == '/') {
-                System.out.println("0으로 나눌 수 없습니다. 올바른 값을 입력하세요.");
+            while (b == 0 && operation == '/') {
+                System.out.println("나눗셈에서 분모에 0이 올 수 없습니다.");
+                System.out.print("두번째 숫자를 입력하세요 : ");
+                b = scanner.nextInt();
+                while (b < 0) {
+                    System.out.println("0을 포함한 양의 정수로 입력하십시오.");
+                    System.out.print("두번째 숫자를 입력하세요 : ");
+                    b = scanner.nextInt();
+                }
+                System.out.print("사칙연산 기호를 입력하세요(+, -, *, /) : ");
+                operation = scanner.next().charAt(0);
             }
+
             int result = calculator.calc(a, b, operation);
             System.out.println("값은 : " + result);
 
