@@ -14,11 +14,6 @@ public class Calculator {
 
         int result = 0;
 
-        if (operation == '/' && b == 0) {
-            System.out.println("0으로 나눌 수 없습니다. 올바른 값을 입력하세요.");
-            return 0;
-        }
-
         switch (operation) {
             case '+':
                 result = a + b;
