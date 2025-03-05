@@ -42,4 +42,8 @@ public class Calculator {
     public void setList(ArrayList<Integer> list) {
         this.list = list;
     }
+
+    public void removeList() {
+        list.remove(0);
+    }
 }

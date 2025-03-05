@@ -47,6 +47,13 @@ public class App {
             System.out.println("값은 : " + result);
 
             System.out.println("저장된 연산기록 :" + calculator.getList());
+            System.out.println("가장 오래된 연산기록을 지우시겠습니까? (yes 입력시 삭제)");
+            String removeInput = scanner.next();
+            if (removeInput.equals("yes")) {
+                calculator.removeList();
+                System.out.println("삭제되었습니다.");
+            }
+            System.out.println("저장된 연산기록 :" + calculator.getList());
 
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
             str = scanner.next();
