@@ -34,4 +34,12 @@ public class Calculator {
         list.add(result);
         return result;
     }
+
+    public ArrayList<Integer> getList() {
+        return list;
+    }
+
+    public void setList(ArrayList<Integer> list) {
+        this.list = list;
+    }
 }
